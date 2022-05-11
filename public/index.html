@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="logo.png">
+  <title>Weather API</title> <!-- 0 width space ¯\_(ツ)_/¯ -->
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!--Input for call-->
+  <div class="center-box" id="input-box">
+    <input type="text" id="zip-input" placeholder="Enter a valid zipcode" />
+    <button id="call-api">Show Weather Data</button>
+  </div>
+  <!--After response-->
+  <div id="popup-box" style="visibility: hidden">
+    <header id="popup-header">
+      <img width="48" class="no-drag no-select" id="header-img" />
+      <span id="location"></span>
+      <span id="local-time"></span>
+    </header>
+    <img class="no-drag no-select" id="divider" src="divider.png"/>
+    <span id="popup-content"></span>
+    <img class="no-drag no-select" id="divider" src="divider.png"/>
+    <footer id="popup-footer">
+      <button class="no-select" id="go-back">Go back</button>
+      <span id="last-updated"></span>
+    </footer>
+  </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+<script>
+  document.getElementById("call-api").addEventListener("click",function(){var e=document.getElementById("zip-input").value||null;if(null!==e){var t=new XMLHttpRequest;t.open("POST","/"),t.setRequestHeader("Content-Type","application/json"),t.onreadystatechange=function(){if(4===t.readyState){if(responseData=JSON.parse(t.responseText),responseData.error)return void Toastify({text:`Error: ${responseData.error.message}`,duration:2500,close:!0,style:{background:"#DBB45A",color:"#14121A",fontFamily:"Red Hat Mono",fontSize:"12px"}}).showToast();const e=responseData.location,n=responseData.current;console.log(responseData),responseBox=document.getElementById("popup-box"),document.getElementById("input-box").style.visibility="hidden",responseBox.style.visibility="visible",document.getElementById("header-img").src=`https:${n.condition.icon}`,document.getElementById("location").innerText=`${e.name}, ${e.region}, ${e.country}`,document.getElementById("local-time").innerText=e.localtime.substring(e.localtime.length-5),document.getElementById("last-updated").innerText=`Last Updated: ${n.last_updated.substring(n.last_updated.length-5)}`,"USA"===e.country||"United States of America"===e.country?document.getElementById("popup-content").innerText=`Temp: ${n.temp_f} °F\nFeels Like: ${n.feelslike_f} °F\nWind: ${n.wind_mph}mph\nVisibility: ${n.vis_miles}mi\nHumidity: ${n.humidity}%\nUV Index: ${n.uv}`:document.getElementById("popup-content").innerText=`Temp: ${n.temp_c} °C\nFeels Like: ${n.feelslike_c} °C\nWind: ${n.wind_kph}kph\nVisibility: ${n.vis_km}km\nHumidity: ${n.humidity}%\nUV Index: ${n.uv}`}};var n=`{"zipcode": "${e}"}`;t.send(n)}else Toastify({text:"Enter something into the input box",duration:2500,close:!0,style:{background:"#DBB45A",color:"#14121A",fontFamily:"Red Hat Mono",fontSize:"12px"}}).showToast()}),document.getElementById("go-back").addEventListener("click",function(){document.getElementById("input-box").style.visibility="visible",document.getElementById("popup-box").style.visibility="hidden"});
+</script>
+</html>
