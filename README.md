@@ -32,7 +32,7 @@ npm insall
 
 ### Alternate Install (Not recommended)
 
-1. Follow [https://nodejs.org/en/download/](https://nodejs.org/en/download/) and download the pre-build installer best matched for your system.
+1. Follow [https://nodejs.org/en/download/](https://nodejs.org/en/download/) and download the pre-built installer best matched for your system.
 2. Follow the installation instructions that open when you click on the `.msi` that was just downloaded.
 3. Download the source of this project by clicking the "Code" dropdown and clicking "Download ZIP"
 4. Extract the zip.
