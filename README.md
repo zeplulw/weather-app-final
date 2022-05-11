@@ -1,6 +1,6 @@
 <p align="center">
-  <img width="100" src="public/logo.png"><br>
-  <span>Weather App - Intermediate Computing Final</span>
+  <img src="public/logo.png">
+  <h1 align="center">Weather App Docs</h1>
 </p>
 
 Note: This repository is not secure in any way, and disclosing your API key inside of a GitHub repo is among the dumbest things you could do. Please do not replicate.
@@ -39,12 +39,14 @@ npm insall
 3. Download the source of this project by clicking the "Code" dropdown and clicking "Download ZIP"
 4. Extract the zip.
 5. Use your CLI of choice to navigate to the folder where you extracted the ZIP.
-6. Run the command below to automatically install the required packages.
+6. Run the commands below to automatically install the required packages and start the webserver.
 
 ```
 npm install
+node app.js
 ```
 
+Note: This will not run in the background when you close the CLI window. Utilize something like unix's `nohup` command in order to run the server in the background.
 
 Main Input Box
 --------------
