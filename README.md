@@ -13,19 +13,6 @@ Table of Contents
 Installation
 ------------
 
-1. Follow [https://nodejs.org/en/download/](https://nodejs.org/en/download/) and download the pre-build installer best matched for your system.
-2. Follow the installation instructions that open when you click on the `.msi` that was just downloaded.
-3. Download the source of this project by clicking the "Code" dropdown and clicking "Download ZIP"
-4. Extract the zip.
-5. Use your CLI of choice to navigate to the folder where you extracted the ZIP.
-6. Run the command below to automatically install the required packages.
-
-```
-npm install
-```
-
-### Alternate Install
-
 1. Follow this link to clone this GitHub repo to a repl: [![](https://replit.com/badge/github/zeplulw/weather-app-final)](https://replit.com/github/zeplulw/weather-app-final)
 2. Once the repl is finished cloning, go to the section in the top right and configure it to look like the image below.
 ![](https://i.ibb.co/MDh91S3/image.png)
@@ -38,6 +25,20 @@ npm insall
 ```
 
 6. Click the big green Run button. You're done!
+
+
+### Alternate Install (Not recommended)
+
+1. Follow [https://nodejs.org/en/download/](https://nodejs.org/en/download/) and download the pre-build installer best matched for your system.
+2. Follow the installation instructions that open when you click on the `.msi` that was just downloaded.
+3. Download the source of this project by clicking the "Code" dropdown and clicking "Download ZIP"
+4. Extract the zip.
+5. Use your CLI of choice to navigate to the folder where you extracted the ZIP.
+6. Run the command below to automatically install the required packages.
+
+```
+npm install
+```
 
 
 Main Input Box
