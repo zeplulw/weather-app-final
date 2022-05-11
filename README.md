@@ -14,7 +14,8 @@ Installation
 ------------
 
 1. Follow this link to clone this GitHub repo to a repl: [![](https://replit.com/badge/github/zeplulw/weather-app-final)](https://replit.com/github/zeplulw/weather-app-final)
-2. Once the repl is finished cloning, go to the section in the top right and configure it to look like the image below.
+2. If you get "Something went wrong" make an account or sign in, then retry
+3. Once the repl is finished cloning, go to the section in the top right and configure it to look like the image below.
 ![](https://i.ibb.co/MDh91S3/image.png)
 3. Click "Done"
 4. On the right side of the screen, click the "Shell" tab.
