@@ -29,7 +29,15 @@ npm install
 1. Follow this link to clone this GitHub repo to a repl: [![](https://replit.com/badge/github/zeplulw/weather-app-final)](https://replit.com/github/zeplulw/weather-app-final)
 2. Once the repl is finished cloning, go to the section in the top right and configure it to look like the image below.
 ![](https://i.ibb.co/MDh91S3/image.png)
-3. Click done and then click the big green Run button. You're done!
+3. Click "Done"
+4. On the right side of the screen, click the "Shell" tab.
+5. Run the command below to automatically install the required packages.
+
+```
+npm insall
+```
+
+6. Click the big green Run button. You're done!
 
 
 Main Input Box
