@@ -1,9 +1,7 @@
 <p align="center">
   <img width="100" src="public/logo.png">
+  <h1>Weather App - Intermediate Computing Final</h1>
 </p>
-
-Weather App Usage
-=================
 
 Note: This repository is not secure in any way, and disclosing your API key inside of a GitHub repo is among the dumbest things you could do. Please do not replicate.
 
