@@ -1,6 +1,8 @@
 Weather App Usage
 =================
 
+Note: This repository is not secure in any way, and disclosing your API key inside of a GitHub repo is among the dumbest things you could do. Please do not replicate.
+
 Table of Contents
 -----------------
 [Installation](#installation)
